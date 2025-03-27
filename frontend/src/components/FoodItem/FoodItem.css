@@ -1,0 +1,192 @@
+/* Food Item Styles */
+.food-item {
+    width: 100%;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item:hover {
+    transform: scale(1.02);
+}
+
+.food-item-img-container {
+    position: relative;
+}
+
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-img-container .add:hover {
+    border: 2px solid #FF4C24;
+}
+
+.food-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.food-item-counter img {
+    width: 30px;
+}
+
+.food-item-info {
+    padding: 20px;
+}
+
+.food-item-name-rating {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img {
+    width: 40px;
+}
+
+.food-item-desc {
+    color: #676767;
+    font-size: 12px;
+}
+
+.food-item-price {
+    color: #FF4C24;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+    /* Set max height and enable scrolling if content is long */
+    max-height: 80vh; /* 80% of viewport height */
+    overflow-y: auto;
+  }
+  
+  /* Hide scrollbar but allow scrolling */
+  .modal-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  /* Close button */
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+  
+  /* Image in Modal */
+  .modal-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Info Section */
+  .modal-info {
+    flex: 1;
+    min-width: 0; /* Prevent content from breaking layout */
+  }
+  
+  /* Title */
+  .modal-info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevent title from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Description */
+  .modal-info p {
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 100px; /* Limit the height */
+    overflow-y: auto; /* Enable scrolling if content is too long */
+    padding-right: 5px;
+  }
+  
+  /* Hide scrollbar for description */
+  .modal-info p::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .modal-info p::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  /* Price */
+  .modal-price {
+    font-size: 16px;
+    color: #FF4C24;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  

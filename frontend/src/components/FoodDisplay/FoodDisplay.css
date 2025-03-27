@@ -1,0 +1,29 @@
+.food-display {
+    margin-top: 30px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr)); /* Smaller items on mobile */
+    margin-top: 30px;
+    gap: 15px; /* Less gap to avoid too much space */
+    row-gap: 25px;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 640px) { /* Tablet */
+    .food-display-list {
+        grid-template-columns: repeat(3, minmax(160px, 1fr)); /* Slightly bigger on tablets */
+    }
+}
+
+@media (min-width: 1024px) { /* Desktop */
+    .food-display-list {
+        grid-template-columns: repeat(4, minmax(180px, 1fr)); /* Bigger on desktop */
+    }
+}
